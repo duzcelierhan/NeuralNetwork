@@ -59,6 +59,8 @@
     <Compile Include="ActivationFunctions\IActivationFunction.cs" />
     <Compile Include="ActivationFunctions\LinearActivationFunction.cs" />
     <Compile Include="ActivationFunctions\SigmoidActivationFunction.cs" />
+    <Compile Include="IInputSupplier.cs" />
+    <Compile Include="InputPair.cs" />
     <Compile Include="Layers\Bindings\ITwoDimBase.cs" />
     <Compile Include="Layers\Bindings\TwoDimFullyConnected.cs" />
     <Compile Include="Layers\Bindings\TwoDimNearestNeighbor.cs" />
