@@ -69,6 +69,7 @@
     <Compile Include="Layers\ITwoDimensionSupport.cs" />
     <Compile Include="Layers\LayerBase.cs" />
     <Compile Include="Layers\TwoDimensionalLayer.cs" />
+    <Compile Include="Misc\ParallelTools.cs" />
     <Compile Include="Neuron.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Structures\Position.cs" />

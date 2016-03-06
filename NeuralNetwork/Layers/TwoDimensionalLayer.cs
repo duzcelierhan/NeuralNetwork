@@ -10,7 +10,8 @@ namespace NeuralNetwork.Layers
     {
         #region Fields
 
-        Neuron[,] neurons;
+        Neuron[,] _neurons;
+        int _width, _height;
 
         #endregion
 
@@ -18,23 +19,22 @@ namespace NeuralNetwork.Layers
 
         public TwoDimensionalLayer(int width, int height):base()
         {
-            neurons = new Neuron[height, width];
+            this._width = width;
+            this._height = height;
+            _neurons = new Neuron[height, width];
         }
 
         #endregion
 
         public override void CalculateOutput()
         {
-            Parallel.ForEach<Neuron>((IEnumerable<Neuron>)neurons, x => x.CalculateOutput());
-
-
-
-            foreach (var item in neurons)
+            Parallel.For(0, _height, y => 
             {
-                item.CalculateOutput();
-
-
-            }
+                for (int x = 0; x < _width; x++)
+                {
+                    _neurons[y, x].CalculateOutput();
+                }
+            });
         }
     }
 }
