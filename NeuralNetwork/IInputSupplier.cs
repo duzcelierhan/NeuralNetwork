@@ -8,6 +8,7 @@ namespace NeuralNetwork
 {
     interface IInputSupplier
     {
+        ///<summary>The data</summary>
         double Data { get; }
     }
 }
